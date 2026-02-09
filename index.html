@@ -18,27 +18,21 @@
     .header {
       background: #0b5ed7;
       color: white;
-      padding: 15px 20px;
+      padding: 20px;
+      text-align: center;
     }
 
-    .header-content {
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
-}
+    .header-text h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-.header-text h1 {
-  margin: 0;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.header-text p {
-  margin: 6px 0 0;
-  font-size: 15px;
-  opacity: 0.95;
-}
-
+    .header-text p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      opacity: 0.95;
+    }
 
     /* NAVIGATION */
     .nav {
@@ -120,6 +114,19 @@
       background: rgba(255, 255, 255, 0.2);
     }
 
+    /* HERO IMAGE */
+    .hero-image {
+      margin-top: 45px;
+    }
+
+    .hero-image img {
+      width: 92%;
+      max-width: 950px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      border: 4px solid rgba(255, 255, 255, 0.4);
+    }
+
     /* SECTION STYLE */
     .section {
       padding: 70px 20px;
@@ -152,17 +159,18 @@
     }
 
     .card {
-      background: #f9fafb;
+      background: #ffffff;
       padding: 22px;
       border-radius: 14px;
       border: 1px solid #e5e7eb;
       text-align: left;
       transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
     }
 
     .card h3 {
@@ -175,6 +183,48 @@
       margin-bottom: 0;
       font-size: 14px;
       color: #6b7280;
+    }
+
+    /* GALLERY SECTION */
+    .gallery {
+      max-width: 1100px;
+      margin: auto;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .gallery-item {
+      background: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+      text-align: left;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-item .caption {
+      padding: 22px;
+    }
+
+    .gallery-item h3 {
+      margin: 0;
+      color: #0b5ed7;
+      font-size: 18px;
+    }
+
+    .gallery-item p {
+      margin-top: 8px;
+      margin-bottom: 0;
+      color: #6b7280;
+      font-size: 14px;
+      line-height: 1.5;
     }
 
     /* VISION & MISSION */
@@ -260,15 +310,12 @@
 <body>
 
   <!-- HEADER -->
-    <div class="header">
-    <div class="header-content">
-      <div class="header-text">
-        <h1>BEK Medical Consult</h1>
-        <p>24 hours services available on request</p>
-      </div>
+  <div class="header">
+    <div class="header-text">
+      <h1>BEK Medical Consult</h1>
+      <p>24 Hour Services Available On Request</p>
     </div>
   </div>
-
 
   <!-- NAVIGATION -->
   <div class="nav">
@@ -278,6 +325,52 @@
     <a href="book.html">Book Appointment</a>
     <a href="contact.html">Contact</a>
   </div>
+
+  <!-- SERVICES PREVIEW SECTION (BEFORE HERO) -->
+  <section class="section" style="background:#f9fafb;">
+    <h2>Our Core Diagnostic Services</h2>
+    <p>
+      At BEK Medical Consult, we provide comprehensive diagnostic and endoscopy services
+      using modern equipment and skilled professionals to support early detection and quality healthcare.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Upper GI Endoscopy</h3>
+        <p>Visual examination of the upper digestive tract for accurate diagnosis.</p>
+      </div>
+
+      <div class="card">
+        <h3>Colonoscopy</h3>
+        <p>Examination of the large intestine and rectum for digestive health evaluation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Proctosigmoidoscopy</h3>
+        <p>Assessment of the rectum and lower colon for early detection and diagnosis.</p>
+      </div>
+
+      <div class="card">
+        <h3>ECG & Echocardiography</h3>
+        <p>Cardiac testing services for heart assessment, diagnosis and monitoring.</p>
+      </div>
+
+      <div class="card">
+        <h3>Ultrasound Imaging</h3>
+        <p>High quality ultrasound scanning for fast and reliable diagnostic results.</p>
+      </div>
+
+      <div class="card">
+        <h3>Endoscopy Biopsies</h3>
+        <p>Biopsy sample collection during endoscopy for detailed medical analysis.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cervical Screening (Pap Smear)</h3>
+        <p>Pap smear and HPV screening services for early cervical cancer detection.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- HERO -->
   <section class="hero">
@@ -294,11 +387,13 @@
     </div>
   </section>
 
-  <!-- ABOUT INTRO -->
+  <!-- WHY CHOOSE US -->
   <section class="section">
     <h2>Why Choose Us?</h2>
     <p>
-      24 hour endoscopy services available.
+      At BEK Medical Consult, we are committed to providing reliable and affordable
+      diagnostic solutions. Our professional team ensures quality results and patient-centered
+      service to support effective medical care.
     </p>
 
     <div class="cards">
@@ -320,6 +415,38 @@
       <div class="card">
         <h3>Patient-Centered Care</h3>
         <p>Compassionate service focused on comfort, respect and safety.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR DIAGNOSTIC SERVICES IN ACTION (NO IMAGES) -->
+  <section class="section" style="background:#f9fafb;">
+    <h2>Our Diagnostic Services in Action</h2>
+    <p>
+      We provide accurate and timely diagnostic procedures using modern technology to support
+      early detection and effective healthcare decisions.
+    </p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <div class="caption">
+          <h3>Colonoscopy Procedures</h3>
+          <p>Safe and reliable colonoscopy services for digestive health evaluation.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="caption">
+          <h3>Endoscopy Services</h3>
+          <p>Professional upper GI endoscopy services using modern endoscopic equipment.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="caption">
+          <h3>Professional Consultation</h3>
+          <p>Patient-centered consultation and diagnostic support with expert guidance.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -347,51 +474,6 @@
           cardiac testing and cervical cancer screening using modern technology, skilled professionals and a patient-centered
           approach to support effective medical care and early disease detection.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES PREVIEW -->
-  <section class="section">
-    <h2>Our Core Diagnostic Services</h2>
-    <p>
-      We offer a wide range of diagnostic services designed to deliver accurate results and ensure quality healthcare.
-    </p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Upper GI Endoscopy</h3>
-        <p>Visual examination of the upper digestive tract.</p>
-      </div>
-
-      <div class="card">
-        <h3>Colonoscopy</h3>
-        <p>Examination of the large intestine and rectum.</p>
-      </div>
-
-      <div class="card">
-        <h3>Proctosigmoidoscopy</h3>
-        <p>Examination of the rectum and lower colon for diagnosis.</p>
-      </div>
-
-      <div class="card">
-        <h3>ECG & Echocardiography</h3>
-        <p>Cardiac assessment and monitoring services.</p>
-      </div>
-
-      <div class="card">
-        <h3>Ultrasound Imaging</h3>
-        <p>High quality ultrasound scanning for accurate diagnosis.</p>
-      </div>
-
-      <div class="card">
-        <h3>Endoscopy Biopsies</h3>
-        <p>Biopsy sample collection during endoscopy for analysis.</p>
-      </div>
-
-      <div class="card">
-        <h3>Cervical Screening (Pap Smear)</h3>
-        <p>Pap smear and HPV testing services.</p>
       </div>
     </div>
   </section>
